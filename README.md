@@ -141,12 +141,215 @@ Si se configuran las referencias autovinculadas personalizadas para un repositor
 
 ## Cargar activos
 Puedes cargar activos como imágenes si las arrastras y sueltas, las seleccionas de un buscador de archivos o si las pegas. Puede cargar recursos en las incidencias, solicitudes de incorporación de cambios, comentarios y archivos .md en el repositorio.
-![pedro](
+
+![pedro](https://github.com/samuelseoane/PruebaGit/assets/166494056/3a400c5f-0a51-41a2-a294-58788ea6968d)
+
+## Usar emojis
+Puedes agregar emoji a la escritura escribiendo (:EMOJICODE:), dos puntos seguidos del nombre del emoji.
+
+Espero que te guste :ok_hand: mi primer README, para cualqueir cosa estoy activo :computer: :telephone: las 24h :clock4:
+
+## Párrafos
+
+Se puede crear un nuevo párrafo si dejamos una línea en blanco entre las líneas de texto.
+
+## Notas al pie
+La posición de una nota al pie de página en Markdown no influye en dónde se representará la nota al pie de página. Puedes escribir una nota al pie después de referenciarla y esta aún se interpretará en la parte inferior del archivo con lenguaje de marcado.
+Puedes agregar notas al pie para tu contenido si utilizas esta sintaxis de corchetes:
+
+
+Aquí tenemos un ejemplo de una nota al pie[^1]
+
+Esta sería la segunda línea al pie[^2]
+[^1]: Mi primera idea.
+[^2]: Aquí podemos ver las notas al pie de página
 
 
 
 
 
+## Alertas
 
+Las alertas son una extensión Markdown basada en la sintaxis blockquote que puede utilizar para resaltar la información crítica. En GitHub, se muestran con colores e iconos distintivos para indicar la importancia del contenido.
 
+Para agregar una alerta, debe usarse una línea blockquote especial que especifique el tipo de alerta, seguida de la información de alerta en un blockquote estándar. Existen cinco tipos de alertas.
+
+> [!NOTE]
+> Información útil que los usuarios deben conocer, incluso cuando hojean el contenido.
+
+> [!TIP]
+> Consejos útiles para hacer las cosas mejor o más fácilmente.
+
+> [!IMPORTANT]
+> Información clave que los usuarios necesitan saber para lograr su objetivo.
+
+> [!WARNING]
+> Información urgente que necesita atención inmediata del usuario para evitar problemas.
+
+> [!CAUTION]
+> Asesora sobre riesgos o resultados negativos de determinadas acciones.
+
+## Ocultar el contenido con comentarios
+
+Puedes decirle a GitHub que oculte el contenido del lenguaje de marcado interpretado colocando el contenido en un comentario de HTML.
+
+<!-- Esto es una prueba para ocultar el contenido en Github -->
+
+## Ignorar formato de Markdown
+
+Puede pedirle a GitHub que ignore (u omita) el formato de Markdown escribiendo \ antes del carácter de Markdown.
+
+Vamos a renombrar \*nuestro_nuevo_proyecto\* a \*nuestro_viejo_proyecto\*.
+
+# -Sintaxis Avanzada
+
+Aquí veremos un par de ejemplos de sintaxis avanzada de Markdown.
+
+## Organizar la información en tablas
+
+Puedes construir tablas para organizar la información en comentarios, propuestas, solicitudes de extracción y wikis.
+
+### Creación de una tabla
+
+Puede crear tablas con canalizaciones | y guiones -. Los guiones se usan para crear cada encabezado de columna, mientras que las barras verticales separan cada columna. Debes incluir una línea en blanco antes de tu tabla para que se representen correctamente.
+
+| Ganadores | Perdedores |
+| ------------- | ------------- |
+| Ribeira padel  | Padel Sar  |
+| PadelPrix  | Os Tilos  |
+
+Las barras verticales en cada lado de la tabla son opcionales.
+
+Las celdas pueden variar en el ancho y no es necesario que estén perfectamente alineadas dentro de las columnas. Debe haber al menos tres guiones en cada columna de la línea de encabezamiento.
+
+### Formatear el contenido dentro de tu tabla
+
+Puede usar formatos, como vínculos, bloques de código insertados y estilos de texto en la tabla:
+
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
+Puede alinear el texto a la izquierda, a la derecha o en el centro de una columna al incluir dos puntos : a la izquierda, a la derecha o a ambos lados de los guiones en la línea de encabezamiento.
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
+## Organización de la información con seccionesw contraídas
+
+Para simplificar el Markdown, crea una sección contraída con la etiqueta details encerrada entre (< >).
+
+### Creación de una sección contraída
+
+Puede ocultar temporalmente las secciones de Markdown mediante la creación de una sección contraída que el lector puede elegir expandir. Por ejemplo, si quiere incluir detalles técnicos en el comentario una incidencia que puede no ser relevante o interesante para todos los lectores, puede colocar esos detalles en una sección contraída.
+
+Cualquier Markdown dentro del bloque details se contraerá hasta que el lector haga clic en  para expandir los detalles.
+
+Dentro del bloque details, usa la etiqueta summary para que los lectores sepan lo que hay dentro.
+
+<details>
+<sumary> Ejemplo de una sección contraída</sumary>
+  
+###Encabezado 12.1
+
+Este encabezado contiene información no relevante para el desarrollo de nuestro proyecto
+
+Incluyo código, imágenes, etc.
+
+```ruby
+    "Esto es pura paja"
+```
+</details>
+
+## Crear y resaltar bloques de código
+
+Compartir muestras de código con bloques de código cercados y habilitar el resaltado de la sintaxis
+
+### Bloques de código delimitados
+
+Puede crear bloques de código delimitados colocando comillas simples triples (```) antes y después del bloque de código. Te recomendamos dejar una línea en blanco antes y después de los bloques de código para facilitar la lectura del formato sin procesar.
+
+```
+funcion prueba() {
+  System.out.println("Parece que todo funciona correctamente");
+}
+```
+
+Para mostrar las comillas simples triples en un bloque de código cercado, enciérralas en comillas simples cuádruples.
+
+````
+```
+Correcto, confirmamos el buen funcionamiento.
+```
+````
+
+### Resaltado de sintaxis
+
+Puedes agregar un identificador opcional de idioma para habilitar el resaltado de la sintaxis en tu bloque de código cercado.
+
+El resaltado de sintaxis cambia el color y el estilo del código fuente para facilitar la lectura.
+
+Por ejemplo, para resaltar la sintaxis del código Ruby:
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hola mundo!")
+puts markdown.to_html
+```
+
+## Crear diagramas
+
+Creación de diagramas para transmitir información mediante tablas y gráficos
+
+### Acerca de crear diagramas
+
+Puede crear diagramas en Markdown con tres sintaxis diferentes: Mermaid, geoJSON y topoJSON, y STL ASCII. La representación de diagramas está disponible en los archivos GitHub Issues, GitHub Discussions, solicitudes de incorporación de cambios, wikis y Markdown.
+
+### Crear diagramas de Mermaid
+
+Mermaid es una herramienta inspirada en Markdown que representa texto en diagramas. Por ejemplo, Mermaid puede representar gráficos de flujo, diagramas de secuencia, gráficos circulares y mucho más.
+
+Para crear un diagrama de Mermaid, agregue la sintaxis de Mermaid dentro de un bloque de código delimitado con el identificador de idioma mermaid.
+
+```mermaid
+graph TD;
+    A[Deportes] --> B(Fútbol);
+    A --> C(Baloncesto);
+    A --> D(Tennis);
+    A --> E(Golf);
+    B --> F(Equipos);
+    B --> G(Jugadores);
+    C --> H(Equipos);
+    C --> I(Jugadores);
+    D --> J(Single);
+    D --> K(Double);
+    E --> L(Cursos);
+    E --> M(Participantes);
+```
+
+## Escritura de expresiones matemáticas
+
+Usa Markdown para mostrar expresiones matemáticas en GitHub.
+
+### Acerca de la escritura de expresiones matemáticas 
+
+Para habilitar una comunicación clara de las expresiones matemáticas, GitHub admite expresiones matemáticas con formato LaTeX en Markdown.
+
+La funcionalidad de representación de expresiones matemáticas de GitHub usa MathJax, un motor de visualización basado en JavaScript de código abierto. MathJax admite una amplia gama de macros de LaTeX y varias extensiones de accesibilidad útiles. 
+
+La representación de expresiones matemáticas está disponible en los archivos GitHub Issues, GitHub Discussions, solicitudes de incorporación de cambios, wikis y Markdown.
+
+### Escritura de expresiones insertadas 
+
+Hay dos opciones para delimitar una expresión matemática insertada con el texto. Puedes rodear la expresión con símbolos de dólar ($) o iniciarla con la misma experesión acompañada de ` y terminarla de la misma forma.
+
+Resuelva la siguiente ecuación: 
+$\ 3x + 7 = 16$
+
+Y con esto termino la documentación acerca de la sintaxis básica y avanzada de Markdown en Github.
+
+# Espero que os haya sido útil.
 
